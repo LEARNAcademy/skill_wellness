@@ -29,6 +29,8 @@ target 'SkillWellness' do
 
   pod 'ReactNativeNavigation', :podspec => '../node_modules/react-native-navigation/ReactNativeNavigation.podspec'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'SkillWellnessTests' do
     inherit! :search_paths
     # Pods for testing

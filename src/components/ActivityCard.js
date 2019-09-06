@@ -1,15 +1,23 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
+
 
 function ActivityCard({ activity }){
   return(
-    <View>
-      <Text>{activity.title}</Text>
-      <Text>{activity.subtitle}</Text>
+    <Card
+      title={activity.title}
+      image={{uri:activity.image}}>
+      <Text style={{marginBottom: 10}}>
+        {activity.subtitle}
+      </Text>
       <Text>{activity.description}</Text>
-      <Image source={{uri:activity.image}} style={{width:50, height:50}}/>
       <Text>{activity.status}</Text>
-    </View>
+      <Button
+        icon={<Icon name='code' color='#ffffff' />}
+        buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+        title='VIEW NOW' />
+    </Card>
   )
 }
 
