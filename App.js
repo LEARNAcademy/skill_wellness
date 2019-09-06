@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import ActivityCard from './src/components/ActivityCard'
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { observer } from 'mobx-react'
 
+@observer
 class App extends Component{
   constructor(props){
     super(props)
-    this.props.store.addActivity({title: "example", subtitle: "sub-example", description: "blah blah", image: "http://www.iconninja.com/files/463/382/476/development-code-curly-brackets-programming-coding-website-icon.png", status: "available"})
+    this.props.store.getActivities()
   }
   render(){
     const store = this.props.store
