@@ -2,6 +2,8 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements'
 
+import Status from './Status'
+
 
 function ActivityCard({ activity }){
   return(
@@ -14,7 +16,7 @@ function ActivityCard({ activity }){
         { activity.subtitle }
       </Text>
       <Text>{ activity.description }</Text>
-      <Text>{ activity.status }</Text>
+      <Status value={activity.status} />
       <Button
         icon={ <Icon name='code' color='#ffffff' /> }
         buttonStyle={{ borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0 }}
