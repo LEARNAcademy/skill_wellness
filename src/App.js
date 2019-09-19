@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ActivityCard from './src/components/ActivityCard'
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { observer } from 'mobx-react'
+
+import ActivityDetail from './pages/ActivityDetail'
 
 @observer
 class App extends Component{
@@ -13,11 +14,9 @@ class App extends Component{
     const store = this.props.store
     return (
       <View>
-        {store.activities.map((activity, index) => {
-          return (
-            <ActivityCard key={ index } activity={ activity }/>
-          )
-        })}
+        {this.props.store.activities.length > 0 &&
+          <ActivityDetail activity={this.props.store.activities[0]} />
+        }
       </View>
     );
   }

@@ -2,7 +2,7 @@
  * @format
  */
 import { Navigation } from "react-native-navigation";
-import App from './App';
+import App from './src/App';
 import ObservableActivitiesStore from './stores/ObservableActivitiesStore';
 import React from 'react';
 
